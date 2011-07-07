@@ -18,7 +18,7 @@ class Currency
             self::SKK=> array(200,100,50,20,10,5,2,1,0.5,0.2,0.1) //old currency
     );
 
-    public static function convert($fromCurrency=self::EUR, $toCurrency=self::EUR, $price){
+    public static function convert($fromCurrency, $toCurrency, $price){
             return ($price/Currency::$convertTable[$fromCurrency])*Currency::$convertTable[$toCurrency];
     }
 

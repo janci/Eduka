@@ -6,8 +6,16 @@ require_once('Storage/DocumentStorage.php');
 require_once('Storage/DummyStorage.php');
 require_once('Storage/SessionStorage.php');
 
+/*************************** CashBox Classes ******************* js ***/
+require_once('CashBox/Currency.php');
+require_once('CashBox/Price.php');
+
+/************************** Shipment Classes ******************* js ***/
+require_once('Shipment/Payment.php');
+require_once('Shipment/Transport.php');
+
 /***************************** Core Classes ******************** js ***/
-require_once('Price.php');
-require_once('Products.php');
-require_once('Currency.php');
-require_once('Basket.php');
+require_once('Shop/Price.php');
+require_once('Shop/Products.php');
+require_once('Shop/Entry.php');
+require_once('Shop/Basket.php');
