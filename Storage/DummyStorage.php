@@ -1,8 +1,7 @@
 <?php
 class DummyStorage implements IStorage
 {
-    public function __construct(){
-        
+    public function __construct($storage_name){   
     }
     
     public function read($key) {

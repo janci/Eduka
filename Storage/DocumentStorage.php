@@ -1,7 +1,7 @@
 <?php
 class DocumentStorage
 {
-    public function __construct() {
-        ;
+    public function __construct($storage_name) {
+        
     }
 }
