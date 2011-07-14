@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\Storage;
 class SessionStorage implements IStorage
 {	
 	private static $sessionStarted=false;

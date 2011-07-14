@@ -19,3 +19,10 @@ require_once('Shop/Price.php');
 require_once('Shop/Products.php');
 require_once('Shop/Entry.php');
 require_once('Shop/Basket.php');
+
+/***********************Application Classes ******************** js ***/
+require_once('DI/IContainer');
+
+/***************************** Init Class ********************** js ***/
+require_once('Eduka.php');
+

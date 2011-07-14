@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\Storage;
 class MemoryStorage implements IStorage
 {
     private $storage;

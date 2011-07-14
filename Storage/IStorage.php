@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\Storage;
 interface IStorage
 {
 	function read($key);

@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\CashBox;
 class Price
 {
 	private $price;

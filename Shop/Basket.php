@@ -1,4 +1,6 @@
 <?php
+namespace Eduka\Shop;
+
 class Basket
 {
     private $storage;
@@ -7,7 +9,7 @@ class Basket
         $this->storage = $storage;
     }
 
-    public function addEntry(Entry $product){
+    public function addProduct(Product $product){
         if(!isset($this->products[$product->getId()]))
             $this->products[$product->getId()] = $product;
         else {
@@ -17,13 +19,13 @@ class Basket
         $this->storage->write('products', $this->products);
     }
 
-    public function getEntry(int $entryId){
+    public function getProduct(int $entryId){
         if (isset($this->products[$entryId])) $this->products[$entryId];
         return null;
     }
 
     public function removeProduct(Product $product){
-        unset($this->products[$productId]);
+        unset($this->products[$product->getId()]);
         $this->storage->write('products', $this->products);
     }
 

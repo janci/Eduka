@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\CashBox;
 class Currency
 {
     const EUR = 1;

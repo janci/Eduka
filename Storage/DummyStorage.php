@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\Storage;
 class DummyStorage implements IStorage
 {
     public function __construct($storage_name){   

@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\Storage;
 class DatabaseStorage
 {
     private $table;
