@@ -1,12 +1,12 @@
 <?php
-namespace Eduka\DI;
+namespace Eduka\Portal\DI;
 
 /**
  * Description of EdukaContainer
  * @author Švantner Ján <janci@janci.net>
  * @copyright Copyright (c) 2011, Švantner Ján <janci@janci.net>
  */
-class EdukaContainer implements \Eduka\DI\IContainer { 
+class EdukaContainer implements \Eduka\Portal\DI\IContainer { 
     private $services;
     
     public function addService($name, $service) {

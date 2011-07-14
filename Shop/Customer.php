@@ -6,7 +6,7 @@ namespace Eduka\Shop;
  * @author Švantner Ján <janci@janci.net>
  * @copyright Copyright (c) 2011, Švantner Ján <janci@janci.net>
  */
-class Customer {
+class Customer extends \Eduka\Portal\User {
    private $basket;
    public function __construct(Basket $basket){
        $this->basket = $basket;

@@ -15,13 +15,24 @@ require_once('Shipment/Payment.php');
 require_once('Shipment/Transport.php');
 
 /***************************** Core Classes ******************** js ***/
-require_once('Shop/Price.php');
-require_once('Shop/Products.php');
-require_once('Shop/Entry.php');
+require_once('Shop/Product.php');
+require_once('Shop/ProductList.php');
+require_once('Shop/ProductPack.php');
+require_once('Shop/Customer.php');
 require_once('Shop/Basket.php');
 
 /***********************Application Classes ******************** js ***/
-require_once('DI/IContainer');
+require_once('Portal/DI/IContainer.php');
+require_once('Portal/DI/EdukaContainer.php');
+require_once('Portal/DI/DIException');
+
+require_once('Portal/User.php');
+require_once('Portal/ITranslator.php');
+require_once('Portal/EdukaTranslator.php');
+
+/*********************** Paginator Classes ********************* js ***/
+require_once('Paginator/IPaginatable.php');
+require_once('Paginator/Paginator.php');
 
 /***************************** Init Class ********************** js ***/
 require_once('Eduka.php');

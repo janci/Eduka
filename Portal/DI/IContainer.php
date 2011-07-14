@@ -1,5 +1,5 @@
 <?php
-namespace Eduka\DI;
+namespace Eduka\Portal\DI;
 
 /**
  * Description of IContainer

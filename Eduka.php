@@ -24,7 +24,17 @@ class Eduka {
         $storage = new Storage\SessionStorage('eduka_basket');
         $basket = new Shop\Basket($storage);
         $this->container->addService('customer', new Shop\Customer($basket));
+        return $this->container->getService('customer');
     }
+    
+    public function getTranslator(){
+        if ($this->container->hasService('translator')) 
+                return $this->container->getService('translator');
+        
+        $this->container->addService('translator', new Portal\EdukaTranslator());
+        return $this->container->getService('translator');
+    }
+    
     
     public function getProductCatalog(){
         
