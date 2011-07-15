@@ -3,12 +3,23 @@ namespace Eduka\Shop;
 
 class Basket
 {
+    /** @var \Eduka\Storage\IStorage */
     private $storage;
+    /** @var ProductPack[] */
     private $products;
-    public function __construct(IStorage $storage){
+    
+    /**
+     * Create new basket
+     * @param \Eduka\Storage\IStorage $storage 
+     */
+    public function __construct(\Eduka\Storage\IStorage $storage){
         $this->storage = $storage;
     }
-
+    
+    /**
+     * Add new product to basket
+     * @param Product $product 
+     */
     public function addProduct(Product $product){
         if(!isset($this->products[$product->getId()]))
             $this->products[$product->getId()] = $product;
@@ -19,20 +30,34 @@ class Basket
         $this->storage->write('products', $this->products);
     }
 
+    /**
+     * Get product from basket
+     * @param int $entryId
+     * @return Product 
+     */
     public function getProduct(int $entryId){
         if (isset($this->products[$entryId])) $this->products[$entryId];
         return null;
     }
 
+    /**
+     * Remove product from basket
+     * @param Product $product 
+     */
     public function removeProduct(Product $product){
         unset($this->products[$product->getId()]);
         $this->storage->write('products', $this->products);
     }
 
-
+    /**
+     * Get basket price
+     */
     public function getPrice(){
     }
     
+    /**
+     * Clear all basket
+     */
     public function clear(){
         unset($this->products);
         $this->storage->remove('products');

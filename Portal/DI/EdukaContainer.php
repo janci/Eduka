@@ -16,7 +16,7 @@ class EdukaContainer implements \Eduka\Portal\DI\IContainer {
     
     public function getService($name) {
         if(!$this->hasService($name)) throw new DIException("Unknown service ".$name);
-        return $this->service[$name];
+        return $this->services[$name];
     }
     
     public function hasService($name) {

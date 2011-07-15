@@ -1,4 +1,18 @@
 <?php
+/*********************** Paginator Classes ********************* js ***/
+require_once('Paginator/IPaginatable.php');
+require_once('Paginator/Paginator.php');
+
+/***********************Application Classes ******************** js ***/
+require_once('Portal/DI/IContainer.php');
+require_once('Portal/DI/EdukaContainer.php');
+require_once('Portal/DI/DIException.php');
+
+require_once('Portal/User.php');
+require_once('Portal/ITranslator.php');
+require_once('Portal/EdukaTranslator.php');
+
+
 /***************************** Storages ************************ js ***/
 require_once('Storage/IStorage.php');
 require_once('Storage/DatabaseStorage.php');
@@ -20,19 +34,6 @@ require_once('Shop/ProductList.php');
 require_once('Shop/ProductPack.php');
 require_once('Shop/Customer.php');
 require_once('Shop/Basket.php');
-
-/***********************Application Classes ******************** js ***/
-require_once('Portal/DI/IContainer.php');
-require_once('Portal/DI/EdukaContainer.php');
-require_once('Portal/DI/DIException');
-
-require_once('Portal/User.php');
-require_once('Portal/ITranslator.php');
-require_once('Portal/EdukaTranslator.php');
-
-/*********************** Paginator Classes ********************* js ***/
-require_once('Paginator/IPaginatable.php');
-require_once('Paginator/Paginator.php');
 
 /***************************** Init Class ********************** js ***/
 require_once('Eduka.php');

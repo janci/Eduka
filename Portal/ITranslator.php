@@ -6,8 +6,6 @@ namespace Eduka\Portal;
  */
 interface ITranslator {
     
-    public function translate($string, int $count = NULL ){
-        
-    }
+    public function translate($string, int $count = NULL );
 }
 

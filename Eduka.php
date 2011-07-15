@@ -7,16 +7,29 @@ namespace Eduka;
  * @copyright Copyright (c) 2011, Švantner Ján <janci@janci.net>
  */
 class Eduka {
+    /** @var Portal\DI\IContainer */
     private $container;
-    public function __construct(DI\IContainer $container){
+    
+    /**
+     * Create new eduka shop
+     * @param Portal\DI\IContainer $container 
+     */
+    public function __construct(Portal\DI\IContainer $container){
         $this->container = $container;
     }
     
-    
+    /**
+     * Return DI container
+     * @return Portal\DI\IContainer 
+     */
     public function getContainer(){
         return $this->container;
     }
     
+    /**
+     * Return current customer
+     * @return Shop\Customer 
+     */
     public function getCustomer(){
         if ($this->container->hasService('customer')) 
                 return $this->container->getService('customer');
@@ -27,6 +40,10 @@ class Eduka {
         return $this->container->getService('customer');
     }
     
+    /**
+     * Return service translator
+     * @return Portal\ITranslator 
+     */
     public function getTranslator(){
         if ($this->container->hasService('translator')) 
                 return $this->container->getService('translator');

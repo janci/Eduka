@@ -1,4 +1,5 @@
 <?php
+namespace Eduka\Paginator;
 /**
  * Interface for using on class what is paginatable
  * @author Švantner Ján <janci@janci.net>

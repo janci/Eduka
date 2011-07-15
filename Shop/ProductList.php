@@ -6,7 +6,7 @@ namespace Eduka\Shop;
  * @author Švantner Ján <janci@janci.net>
  * @copyright Copyright (c) 2011, Švantner Ján <janci@janci.net>
  */
-class ProductList implements \IPaginatable {
+class ProductList implements \Eduka\Paginator\IPaginatable {
     private $paginator;
     public function __construct(){
         

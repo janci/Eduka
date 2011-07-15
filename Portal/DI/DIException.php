@@ -1,6 +1,6 @@
 <?php
 namespace Eduka\Portal\DI;
 
-class DIException extends Exception {
+class DIException extends \Exception {
     
 }
