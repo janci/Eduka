@@ -8,7 +8,7 @@ namespace Eduka\Shop;
  */
 class ProductList implements \Eduka\Paginator\IPaginatable {
     private $paginator;
-    public function __construct(){
+    public function __construct(\PDO $database){
         
     }
     

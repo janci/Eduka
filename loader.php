@@ -1,4 +1,8 @@
 <?php
+/*********************** Configurator Classes ********************* js ***/
+require_once('Portal/Configuration/IConfiguration.php');
+require_once('Portal/Configuration/INIConfiguration.php');
+
 /*********************** Paginator Classes ********************* js ***/
 require_once('Paginator/IPaginatable.php');
 require_once('Paginator/Paginator.php');
