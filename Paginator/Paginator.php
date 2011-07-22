@@ -21,7 +21,7 @@ class Paginator implements \Iterator {
     }
     
     public function current() {
-        return $this->current_item->getItem($this->current_item);
+        return $this->pagObject->getItem($this->current_item);
     }
     
     public function key() {
@@ -37,7 +37,7 @@ class Paginator implements \Iterator {
     }
     
     public function valid() {
-        $this->current_item<=$this->current_item->getCount();
+        return $this->current_item<=$this->pagObject->getCount();
     }
     
 }

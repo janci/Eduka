@@ -6,6 +6,23 @@ namespace Eduka\Shop;
  * @copyright Copyright (c) 2011, Švantner Ján <janci@janci.net>
  */
 class Product {
-    //put your code here
+    private $name;
+    private $description;
+    private $sku;
+    
+    public function __construct(){
+    }
+    
+    public function getName(){
+        return $this->name;
+    }
+    
+    public function getDescription(){
+        return $this->description;
+    }
+    
+    public function getSKU(){
+        return $this->sku;
+    }
 }
 
