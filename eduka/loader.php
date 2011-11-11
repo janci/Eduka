@@ -22,6 +22,7 @@ require_once('Storage/IStorage.php');
 require_once('Storage/DatabaseStorage.php');
 require_once('Storage/DocumentStorage.php');
 require_once('Storage/DummyStorage.php');
+require_once('Storage/MemoryStorage.php');
 require_once('Storage/SessionStorage.php');
 
 /*************************** CashBox Classes ******************* js ***/
