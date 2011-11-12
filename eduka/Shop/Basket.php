@@ -5,6 +5,7 @@ class Basket
 {
     /** @var \Eduka\Storage\IStorage */
     private $storage;
+    
     /** @var ProductPack[] */
     private $products;
     
@@ -20,7 +21,7 @@ class Basket
      * Add new product to basket
      * @param Product $product 
      */
-    public function addProduct(Product $product){
+    public function addProduct(ProductPack $product){
         if(!isset($this->products[$product->getId()]))
             $this->products[$product->getId()] = $product;
         else {
@@ -35,8 +36,8 @@ class Basket
      * @param int $entryId
      * @return Product 
      */
-    public function getProduct(int $entryId){
-        if (isset($this->products[$entryId])) $this->products[$entryId];
+    public function getProduct($entryId){
+        if (isset($this->products[$entryId])) return $this->products[$entryId];
         return null;
     }
 

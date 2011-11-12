@@ -6,13 +6,14 @@ $customer = $shop->getCustomer();
 $basket = $customer->getBasket();
 
 $products = $shop->getProductList();
-
-$products->getProducts();
+$pr = $products->getProducts();
 $paginator = new Eduka\Paginator\Paginator($products, 10);
 
 foreach($paginator as $pr){
-    
+    $basket->addProduct($pr);
+    $pr = $basket->getProduct($pr->getId());
     echo "Name:".$pr->getName().'<br>';
     echo "Description:".$pr->getDescription().'<br>';
+    echo "Code: ".$pr->getSKU().'<br>';
     echo '------------------------------------------<br>';
 }

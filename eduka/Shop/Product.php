@@ -6,9 +6,10 @@ namespace Eduka\Shop;
  * @copyright Copyright (c) 2011, Švantner Ján <janci@janci.net>
  */
 class Product {
-    private $name;
-    private $description;
-    private $sku;
+    protected $name;
+    protected $description;
+    protected $sku;
+    protected $id;
     
     public function __construct(){
     }
@@ -23,6 +24,10 @@ class Product {
     
     public function getSKU(){
         return $this->sku;
+    }
+    
+    public function getId(){
+        return $this->id;
     }
 }
 
